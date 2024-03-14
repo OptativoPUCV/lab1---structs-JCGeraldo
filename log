@@ -42,3 +42,13 @@ test.c:258:18: error: implicit declaration of function ‘checkSorted’; did yo
 cc1: all warnings being treated as errors
 Compilation failed
 1c2de24
+Thu 14 Mar 2024 08:41:21 PM UTC: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+test.c: In function ‘test_mergeSort’:
+test.c:204:3: error: implicit declaration of function ‘mergeSortedArrays’ [-Werror=implicit-function-declaration]
+  204 |   mergeSortedArrays(arr1, size1, arr2, size2, result);
+      |   ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e92dc19

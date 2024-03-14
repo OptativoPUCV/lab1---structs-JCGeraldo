@@ -58,19 +58,19 @@ arreglos en un tercer arreglo también ordenado.
 /*void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) {
   int i = 0, j = 0, k = 0;
-  while (i < size1 && j < size2)
+  
   }
-  }
-  */                     
-
+  
+                       }
+*/
 /*
 Ejercicio 5: Comprobación de Ordenación
 Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-/*int checkSorted(int arr[], int size) { return -2; }
-*/
+int checkSorted(int arr[], int size) { return -2; }
+
 /*
 Ejercicio 6: Información de una Biblioteca
 Descripción: Vamos a representar la información de una biblioteca. En la
