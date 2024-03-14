@@ -40,7 +40,7 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { 
-  int *newArr = malloc(sizeof(int) * size);
+  int *newArr = malloc(size);
   int i = 0;
   for(int j = 0; i < size; i++){
     if(arr[j] % 2 == 0)
@@ -68,7 +68,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       j++;
     }
   }
-  
   }
   
               
