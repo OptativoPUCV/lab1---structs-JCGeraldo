@@ -40,11 +40,14 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { 
-  int *newArr = malloc(size);
-  int i = 0;
-  for(int j = 0; i < size; i++){
-    if(arr[j] % 2 == 0)
-      newArr[i] = arr[j];
+  int *newSize = 0;
+  int *newArr;
+  for(int j = 0; j < size; j++){
+    if(arr[j] % 2 == 0){
+      (*newSize)++;
+      newArr = realloc(newArr, sizeof(int) * (*newSize));
+      newArr[*newSize] = arr[j];
+    }
   }
   return newArr;
 }
@@ -68,10 +71,8 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       j++;
     }
   }
-  }
+}
   
-              
-
 /*
 Ejercicio 5: Comprobación de Ordenación
 Descripción: Escribe una función que tome un arreglo y su tamaño,
