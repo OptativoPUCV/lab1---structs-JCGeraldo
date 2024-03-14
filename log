@@ -105,3 +105,9 @@ exercises.c:42:50: note: previous definition of ‘newSize’ with type ‘int *
       |                                             ~~~~~^~~~~~~
 Compilation failed
 a4d9931
+Thu 14 Mar 2024 08:54:59 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 20/70
+96cec60
