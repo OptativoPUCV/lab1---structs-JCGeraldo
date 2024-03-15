@@ -11,8 +11,8 @@ y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) {
   int max = arr[0];
-  for(int i = 1; i < size; i++){
-    if(arr[i] > max){
+  for (int i = 1; i < size; i++) {
+    if (arr[i] > max) {
       max = arr[i];
     }
   }
@@ -26,7 +26,7 @@ invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) {
   int temp;
-  for(int i = 0; i < size/2; i++){
+  for (int i = 0; i < size / 2; i++) {
     temp = arr[i];
     arr[i] = arr[size - i - 1];
     arr[size - i - 1] = temp;
@@ -39,11 +39,11 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { 
+int *filterEvenNumbers(int arr[], int size, int *newSize) {
   *newSize = 0;
-  int *newArr = (int *) malloc(sizeof(int) * size);
-  for(int j = 0; j < size; j++){
-    if(arr[j] % 2 == 0){
+  int *newArr = (int *)malloc(sizeof(int) * size);
+  for (int j = 0; j < size; j++) {
+    if (arr[j] % 2 == 0) {
       newArr[(*newSize)] = arr[j];
       (*newSize)++;
     }
@@ -57,42 +57,41 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]) {
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+                       int result[]) {
   int i = 0, j = 0, k = 0;
-  
-  for(i = 0; i < (size1 + size2 ); i++){
-      if(j < size1 && arr1[j] < arr2[k] ){
-        result[i] = arr1[j];
-        j++;
-      }
-      else if (k < size2){
-        result[i] = arr2[k];
-        k++;
-      }
+
+  for (i = 0; i < (size1 + size2); i++) {
+    if (j < size1 && arr1[j] < arr2[k]) {
+      result[i] = arr1[j];
+      j++;
+    } else if (k < size2) {
+      result[i] = arr2[k];
+      k++;
     }
   }
+}
 /*
 Ejercicio 5: Comprobación de Ordenación
 Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { 
+int checkSorted(int arr[], int size) {
   int ascendente = 1;
   int descendente = 1;
-  
-  for(int i = 0; i < size - 1; i++){
-    if(arr[i] > arr[i+1]){
-      ascendente = 0;    
+
+  for (int i = 0; i < size - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      ascendente = 0;
     }
-    if(arr[i] < arr[i+1]){
+    if (arr[i] < arr[i + 1]) {
       descendente = 0;
     }
   }
-  
-  if(ascendente)
+  if (ascendente)
     return 1;
-  if(descendente)
+  if (descendente)
     return -1;
   return 0;
 }
@@ -117,7 +116,12 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion) {
+  strcpy(libro->titulo, titulo);
+  strcpy(libro->autor.nombre, nombreAutor);
+  libro->autor.anioNacimiento = anioNacimiento;
+  libro->anioPublicacion = anioPublicacion;
+}
 
 /*
 Ejercicio 7: Lista enlazada de números
